@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
      fontSize: 30,
      fontWeight: "bold",
      textAlign: 'center',
-     color: colors.third
+     color: colors.primary
     },
 
     formRow: {
@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         borderWidth: 0.7,
-        borderColor: colors.third,
+        borderColor: colors.secondary,
         borderRadius: 5
     },
     icon: {

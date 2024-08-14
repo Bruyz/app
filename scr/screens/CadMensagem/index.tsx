@@ -21,7 +21,7 @@ export function CadMessage({navigation}: MessageTypes){
             setLoading(true)
             try{
                 await apiMessage.store(data)
-                Alert.alert("Mensagem cadastrada!")
+                Alert.alert("Mensagem cadastrada com sucesso!")
                 navigation.navigate("Message")
             }catch(error){
                 const err= error as AxiosError
