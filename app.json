@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "loginJG",
-    "slug": "loginJG",
+    "name": "App",
+    "slug": "App",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -22,6 +22,24 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permite $(PRODUCT_NAME) acessar a sua câmera.",
+          "microphonePermission": "Permita $(PRODUCT_NAME) acessar seu microfone.",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+         "photosPermission": "Permita $(PRODUCT_NAME) acessar suas fotos." ,
+         "savePhotosPermission": "Permita $(PRODUCT_NAME) salvar suas fotos.", 
+         "isAccessMediaLocationEnable": true
+        }
+      ]
+    ]
   }
 }
