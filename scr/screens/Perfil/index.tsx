@@ -26,7 +26,7 @@ export function Perfil() {
                     <Text style={styles.sociaisText}>https://www.linkedin.com</Text>
         </View>
     </View>
-    <ComponentButtonInterface title="Sair" type="secondary"
+    <ComponentButtonInterface title="Sair." type="secondary"
         onPressI={async () => await signOut()}
         />
  </View>

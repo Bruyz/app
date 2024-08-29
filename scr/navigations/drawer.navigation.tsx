@@ -3,11 +3,13 @@ import { colors } from '../styles/colors';
 import { Ionicons } from '@expo/vector-icons';
 import { TabNavigation } from "./tab.navigation";
 import { Camera } from "../screens/Camera";
-import React from 'react';
+import { Imagens } from "../screens/Imagens";
+import Entypo from '@expo/vector-icons/Entypo';import React from 'react';
 
 type DrawerParamList = {
     Tab: undefined
     Camera: undefined
+    Imagem: undefined
 }
 type DrawerScreenNavigationProp = DrawerNavigationProp<DrawerParamList, 'Tab'>
 export type DrawerTypes = {
@@ -34,6 +36,12 @@ export function DrawerNavigation() {
             options={{
                 drawerIcon: ()=> (
                     <Ionicons name="person" size={24} color={colors.white} />
+                ),
+            }} />
+            <Drawer.Screen name='Imagem' component={Imagens}
+             options={{
+                drawerIcon: ()=> (
+                    <Entypo name="flower" size={24} color="black" />
                 ),
             }} />
         </Drawer.Navigator>

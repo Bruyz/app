@@ -9,11 +9,11 @@ import { ComponentLoading } from '../../components';
 import React from 'react';
 
 export function Camera() {
-    const [facing, setFacing] = useState<CameraType>('back');
+    const [facing, setFacing] = useState<CameraType>('back'); //variável de estado: "facing" - interface: "CameraType"
     const [permission, requestPermission] = useCameraPermissions();
     const [permissionMedia, requestPermissionMedia] = MediaLibrary.usePermissions();
     const ref = useRef<CameraView>(null)
-    const [photo, setPhoto] = useState<CameraCapturedPicture>()
+    const [photo, setPhoto] = useState<CameraCapturedPicture>() //variável de estado: "photo"
   
     if (!permission) {
       return <ComponentLoading />

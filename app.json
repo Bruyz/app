@@ -39,6 +39,12 @@
          "savePhotosPermission": "Permita $(PRODUCT_NAME) salvar suas fotos.", 
          "isAccessMediaLocationEnable": true
         }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O aplicativo acessa suas fotos para que você possa compartilhá-las com seus amigos."
+        }
       ]
     ]
   }
