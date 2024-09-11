@@ -4,7 +4,10 @@ import { Ionicons } from '@expo/vector-icons';
 import { TabNavigation } from "./tab.navigation";
 import { Camera } from "../screens/Camera";
 import { Imagens } from "../screens/Imagens";
-import Entypo from '@expo/vector-icons/Entypo';import React from 'react';
+import Entypo from '@expo/vector-icons/Entypo';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import MaterialIcon from '@expo/vector-icons/MaterialCommunityIcons';
+import React from 'react';
 
 type DrawerParamList = {
     Tab: undefined
@@ -35,14 +38,20 @@ export function DrawerNavigation() {
             <Drawer.Screen name='Camera' component={Camera} 
             options={{
                 drawerIcon: ()=> (
-                    <Ionicons name="person" size={24} color={colors.white} />
+                    <MaterialCommunityIcons name="camera-outline" size={24} color="white" />
                 ),
             }} />
             <Drawer.Screen name='Imagem' component={Imagens}
              options={{
                 drawerIcon: ()=> (
-                    <Entypo name="flower" size={24} color="black" />
+                    <Entypo name="flower" size={24} color="white" />
                 ),
+             }} />
+                <Drawer.Screen name='QrCode' component={Imagens}
+                options={{
+                   drawerIcon: ()=> (
+                       <MaterialIcon name="qrcode" size={24} color="white" />
+                   ),
             }} />
         </Drawer.Navigator>
 

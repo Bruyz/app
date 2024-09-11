@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
      fontSize: 30,
      fontWeight: "bold",
      textAlign: 'center',
-     color: colors.primary
+     color: colors.secondary
     },
 
     formRow: {

@@ -3,11 +3,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { LoginNavigation } from "./login.navigation";
 import { useAuth } from "../hook/auth";
 import { DrawerNavigation } from "./drawer.navigation";
-import { Loading } from "../components/Loading";
+import { ComponentLoading } from "../components/Loading";
 export function Navigation () {
     const { user, loading } = useAuth()
     if (loading) {
-        return <Loading />
+        return <ComponentLoading />
     }
     return (
         <NavigationContainer>

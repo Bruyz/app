@@ -9,6 +9,14 @@ import { apiUser } from '../../services/data';
 import { AxiosError } from 'axios';
 import { useAuth } from '../../hook/auth';
 
+export interface IError {
+    errors: {
+        rule: string
+        field: string
+        message: string
+    }[]
+}
+
 export interface IRegister {
     name?: string
     email?: string
@@ -27,8 +35,9 @@ export function Register({ navigation }: LoginTypes) {
                 navigation.navigate("Login")
             } catch (error) {
                 const err = error as AxiosError
-                const msg = err.response?.data as string
-                Alert.alert(msg)
+                console.log(err)
+                const msg = (err.response?.data as IError)
+                Alert.alert(msg.errors.reduce((total, atual) => total + atual.message, ''))
             }
            setLoading(false)
         } else {
@@ -39,11 +48,12 @@ export function Register({ navigation }: LoginTypes) {
     function handleGoBack() {
         navigation.navigate('Login')
     }
+
     function handleChange(item: IRegister) {
         setData({ ...data, ...item });
     }
 
-    return (
+    return(
         <View style={styles.container}>
             <KeyboardAvoidingView>
                 <Text style={styles.title}>Cadastre-se</Text>
@@ -82,5 +92,5 @@ export function Register({ navigation }: LoginTypes) {
                 <ComponentButtonInterface title='Voltar' type='primary' onPressI={handleGoBack} />
             </KeyboardAvoidingView>
         </View>
-    );
+    )
 }

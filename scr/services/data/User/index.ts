@@ -24,14 +24,14 @@ export interface IAuthenticated {
         expires_at: string
     }
 }
-
+/*
 export interface IError {
     errors: {
         rule: string
         field: string 
         message: string
     }[]
-}
+}*/
 
 class UserData {
     register(data: IUser) {
@@ -40,14 +40,6 @@ class UserData {
     login(data: IUser) {
         return api.post<IAuthenticated>('/login', data)
     }
-}
-
-try {
-
-} catch (error){
-    const err = error as AxiosError
-    const msg = (err.response?.data as IError)
-    Alert.alert(msg.errors.reduce((total, atual) => total + atual.message, ''))
 }
 
 export default new UserData()

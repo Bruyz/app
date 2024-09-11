@@ -42,7 +42,7 @@ export function Login({ navigation }: LoginTypes){
     return(
         <View style={styles.container}>
          <KeyboardAvoidingView>
-            <Text style={styles.title}>Please Sing In</Text>
+            <Text style={styles.title}>Entre ou Cadastre-se</Text>
             <View style={styles.formRow}>
                 <MaterialIcons name="email" style={styles.icon} />
                 <TextInput

@@ -15,13 +15,13 @@ export interface IResponseMessage {
         email: string
     }
 }
-export interface IError {
+/*export interface IError {
  errors: {
     rule: string
     field: string
     message: string
  }[]
-} 
+}*/
  
 
 class MessageData {
