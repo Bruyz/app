@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
     ball: {
         width: 70,
         height: 70,
-        backgroundColor: colors.black,
+        backgroundColor: colors.primary,
         borderRadius: 35
     },
     headerSave: {

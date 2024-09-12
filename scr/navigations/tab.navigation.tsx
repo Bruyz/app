@@ -20,7 +20,7 @@ export function TabNavigation() {
     return (
         <Tab.Navigator
             screenOptions={{
-            tabBarActiveBackgroundColor: colors.secondary,
+            tabBarActiveBackgroundColor: colors.primary,
             tabBarActiveTintColor: colors.white,
             headerShown: false,
             tabBarInactiveBackgroundColor: colors.secondary,

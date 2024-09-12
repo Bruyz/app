@@ -52,10 +52,10 @@ export function Camera() {
             <ImageBackground source={{uri: photo.uri}} style={styles.camera}>
                 <View style={styles.headerSave}>
                     <TouchableOpacity onPress={() => setPhoto(undefined)}>
-                        <AntDesign name="back" size={70} color={colors.black}/>
+                        <AntDesign name="back" size={70} color={colors.primary}/>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={savePhoto}>
-                    <AntDesign name="save" size={70} color={colors.black}/>
+                    <AntDesign name="save" size={70} color={colors.primary}/>
                     </TouchableOpacity>
                 </View>
             </ImageBackground>
@@ -66,7 +66,7 @@ export function Camera() {
           <CameraView style={styles.camera} facing={facing} ref={ref}>
             <View style={styles.headerCamera}>
               <TouchableOpacity onPress={toggleCameraFacing}>
-                <AntDesign name="retweet" size={70} color={colors.black}/>
+                <AntDesign name="retweet" size={70} color={colors.primary}/>
               </TouchableOpacity>
             </View>
             <View style={styles.footerCamera}>

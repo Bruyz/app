@@ -1,8 +1,8 @@
 import { BarcodeScanningResult, CameraView, useCameraPermissions } from 'expo-camera';
 import { useAuth } from '../../hook/auth';
-import React, { useState } from 'react';
 import { Alert, Image, Text, TouchableOpacity, View } from 'react-native';
-import { styles } from './styles';
+import { styles } from './styles'
+import React, { useState } from 'react';
 import {ComponentAlbum, ComponentButtonInterface, ComponentLoading} from "../../components";
 
 export function QrCode(){

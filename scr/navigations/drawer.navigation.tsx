@@ -1,18 +1,17 @@
 import { createDrawerNavigator, DrawerNavigationProp } from '@react-navigation/drawer';
 import { colors } from '../styles/colors';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, FontAwesome, MaterialCommunityIcons, Feather} from '@expo/vector-icons';
 import { TabNavigation } from "./tab.navigation";
-import { Camera } from "../screens/Camera";
-import { Imagens } from "../screens/Imagens";
-import Entypo from '@expo/vector-icons/Entypo';
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
-import MaterialIcon from '@expo/vector-icons/MaterialCommunityIcons';
+import { Camera } from "../screens/Camera"
+import { Imagens } from "../screens/Imagens"
 import React from 'react';
+import { QrCode } from '../screens/QrCode';
 
 type DrawerParamList = {
     Tab: undefined
     Camera: undefined
     Imagem: undefined
+    QrCode: undefined
 }
 type DrawerScreenNavigationProp = DrawerNavigationProp<DrawerParamList, 'Tab'>
 export type DrawerTypes = {
@@ -38,20 +37,20 @@ export function DrawerNavigation() {
             <Drawer.Screen name='Camera' component={Camera} 
             options={{
                 drawerIcon: ()=> (
-                    <MaterialCommunityIcons name="camera-outline" size={24} color="white" />
+                    <Feather name="camera" size={24} color="white" />
                 ),
             }} />
-            <Drawer.Screen name='Imagem' component={Imagens}
-             options={{
+            <Drawer.Screen name='Imagem' component={Imagens} 
+            options={{
                 drawerIcon: ()=> (
-                    <Entypo name="flower" size={24} color="white" />
+                    <FontAwesome name="picture-o" size={24} color={colors.white} />
                 ),
-             }} />
-                <Drawer.Screen name='QrCode' component={Imagens}
-                options={{
-                   drawerIcon: ()=> (
-                       <MaterialIcon name="qrcode" size={24} color="white" />
-                   ),
+            }} />
+             <Drawer.Screen name='QrCode' component={QrCode} 
+            options={{
+                drawerIcon: ()=> (
+                    <MaterialCommunityIcons name="qrcode-scan" size={24} color={colors.white} />
+                ),
             }} />
         </Drawer.Navigator>
 
